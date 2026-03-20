@@ -9,7 +9,7 @@ def df(x):
 
 a = 4
 
-x = 4.1
+x = 2
 
 approx = f(a) + df(a) * (x - a)
 exact = f(x)
