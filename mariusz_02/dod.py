@@ -89,7 +89,6 @@ def iterative_outlier_rejection(x, y, sigma, threshold=3.0, max_iter=20, verbose
     if len(x) < 3:
         raise ValueError("Potrzeba co najmniej 3 punktów do iteracyjnej procedury.")
 
-    # maska punktów zachowanych
     mask = np.ones(len(x), dtype=bool)
     removed_indices = []
 
@@ -179,9 +178,6 @@ def iterative_outlier_rejection(x, y, sigma, threshold=3.0, max_iter=20, verbose
 
 
 if __name__ == "__main__":
-    # Przykładowe dane:
-    # większość punktów leży blisko y = 2x + 1,
-    # ale dodajemy kilka odstających
     x = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], dtype=float)
     y = np.array([3.1, 5.0, 7.2, 9.1, 11.0, 13.2, 15.1, 40.0, 19.3, -5.0], dtype=float)
     sigma = np.array([0.3, 0.3, 0.4, 0.3, 0.3, 0.4, 0.3, 0.5, 0.4, 0.5], dtype=float)

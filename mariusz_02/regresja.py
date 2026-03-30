@@ -23,3 +23,6 @@ sigma_b = np.sqrt(Sxx / Delta)
 print("Wyniki regresji liniowej:")
 print(f"a = {a:.6f} ± {sigma_a:.6f}")
 print(f"b = {b:.6f} ± {sigma_b:.6f}")
+import matplotlib.pyplot as plt
+plt.scatter(x,y)
+plt.show()
